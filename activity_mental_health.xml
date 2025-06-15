@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mental_health_check_in"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:importantForAccessibility="yes" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/how_are_you_feeling_today"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp" />
+
+        <!-- Mood Slider -->
+        <com.darkness.sparkwomen.EmojiMoodSlider
+            android:id="@+id/moodSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/mood_slider_description" />
+
+        <TextView
+            android:id="@+id/moodMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_mood_prompt"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp" />
+
+        <!-- Breathing Exercise Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/breatheButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/start_breathing_exercise"
+            android:layout_marginTop="24dp"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp" />
+
+        <ImageView
+            android:id="@+id/breathCircle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/oval_purple_full"
+            android:visibility="gone"
+            android:contentDescription="@string/breathing_circle_description"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/breathText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/breathe"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- Self-Care Tasks -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/self_care_tasks"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:id="@+id/taskContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#EEEEEE"
+            android:layout_marginTop="8dp"
+            android:padding="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/walkTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/take_a_short_walk"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/waterTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/drink_water"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/breathTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/practice_deep_breathing"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+        </LinearLayout>
+
+        <!-- Add Task -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/taskInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:hint="@string/add_your_own_self_care_task"
+                android:inputType="text"
+                android:maxWidth="488dp"
+                android:autofillHints="task" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addTaskButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/add"
+                android:layout_marginStart="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+        </LinearLayout>
+
+        <!-- Completion Message -->
+        <TextView
+            android:id="@+id/completionMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+        <!-- Music Player -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/playMusicButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/play_calm_music"
+            android:layout_marginTop="24dp"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp" />
+
+        <!-- Helpline -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/helplineButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/call_mental_health_helpline"
+            android:layout_marginTop="8dp"
+            app:iconGravity="textStart"
+            app:backgroundTint="@color/red_500"
+            android:textColor="@android:color/white" />
+
+        <!-- Journal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/share_your_thoughts"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/noteInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="@string/write_anything_you_feel"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:maxWidth="488dp"
+            android:autofillHints="note" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveNoteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/save_note"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+    </LinearLayout>
+</ScrollView>

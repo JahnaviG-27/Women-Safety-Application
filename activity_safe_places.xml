@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/find_safe_places_nearby"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnFindPolice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nearby_police_stations"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnFindHospital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nearby_hospitals"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnFindHelpline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/women_s_helpline"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>
