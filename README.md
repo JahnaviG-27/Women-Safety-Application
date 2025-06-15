@@ -21,3 +21,4 @@ it is simple to implement,easy to understand.
 #### Prerequisites :
 - Android Studio
 - Basic knowledge about Firebase Authentication and Realtime database.
+- Languages used:Java,Xml.
